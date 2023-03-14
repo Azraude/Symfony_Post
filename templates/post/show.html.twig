@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <h1>{{ post.title }}</h1>
+                <p>{{ post.content }}</p>
+                <p>Ecrit par {{post.pseudo}} </p>
+                <p class="text-muted">{{ post.sentAt|date('d/m/Y') }}</p>
+                <hr>
+                {# {% for comment in post.comments %}
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ comment.author }}</h5>
+                            <p class="card-text">{{ comment.content }}</p>
+                            <p class="card-text"><small class="text-muted">{{ comment.sentAt|date('d/m/Y') }}</small></p>
+                        </div>
+                    </div>
+                {% endfor %} #}
+                {# <h2>Ajouter un commentaire</h2>
+                {{ form_start(commentForm) }}
+                <div class="form-group">
+                    {{ form_label(commentForm.author, 'Nom') }}
+                    {{ form_widget(commentForm.author, {'attr': {'class': 'form-control'}}) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(commentForm.content, 'Commentaire') }}
+                    {{ form_widget(commentForm.content, {'attr': {'class': 'form-control', 'rows': 5}}) }}
+                </div>
+                <button type="submit" class="btn btn-primary">Ajouter</button>
+                {{ form_end(commentForm) }} #}
+            </div>
+        </div>
+    </div>
+{% endblock %}

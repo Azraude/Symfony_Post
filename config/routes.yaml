@@ -1,0 +1,10 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+app_show_post:
+    path: /posts/{id}
+    controller: App\Controller\PostController::show
+    requirements:
+        id: '\d+'
